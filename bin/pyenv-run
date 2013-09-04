@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# set path for the PYLON python package
+#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/pi/lib/bin"
+#export PYTHONPATH="$PYTHONPATH:/home/pi/lib/Python"
+export PYTHONPATH="$1"
+export LD_LIBRARY_PATH="$2"
+
+# drop the first two args just used
+shift 2
+
+# execute the rest
+# see http://www.ibm.com/developerworks/library/l-bash-parameters/index.html for info
+"$@" 

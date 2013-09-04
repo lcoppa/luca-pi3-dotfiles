@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -avz --delete -e "sshpass -p '2oche' ssh -l luca" /home/pi/ luca-debian-full-vm.local:/home/luca/luca-raspi3

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# get one specific file from the rsync repo on LucaDS231 onto the pi
+# $1 must be the file path, starting from the home dir
+#
+# for example: 
+#   restore-from-lucaDS231 .vimrc
+# will overwrite the local .vimrc with the remote one
+
+scp admin@LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3/$1 ~/$1.scp
+#rsync -avz -e "sshpass -p '2oche' ssh -l admin" LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3/$1 /home/pi/

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# run intermediate script that passes my python env to the sudo env
+sudo /home/pi/bin/pyenv-run "$PYTHONPATH" "$LD_LIBRARY_PATH" ipython3 "$@"

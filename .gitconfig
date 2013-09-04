@@ -1,0 +1,7 @@
+[user]
+	name = Luca Coppadoro
+	email = lcoppa@rocketmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff

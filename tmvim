@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd ~/picode/fiat-lux
+tmux new-session -s vim
