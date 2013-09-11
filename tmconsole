@@ -2,5 +2,6 @@
 
 cd ~/picode/fiat-lux
 
-tmux new-session -s console -d \; split-window -v \; split-window -h \; select-layout 5f8e,177x51,0,0[178x36,0,0{88x36,0,0,89x36,89,0},178x14,0,37] \; select-pane -t 0 \; attach
+#tmux new-session -s console -d \; split-window -v \; split-window -h \; select-layout 5f8e,177x51,0,0[178x36,0,0{88x36,0,0,89x36,89,0},178x14,0,37] \; select-pane -t 0 \; attach
 
+tmux new-session -s console -d \; split-window -v \; select-pane -t 0 \; attach

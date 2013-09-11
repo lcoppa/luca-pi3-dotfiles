@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<time\>
+~Msle0~/))
 
 # Last Substitute Search Pattern:
 ~MSle0&\s\+$
@@ -17,31 +17,38 @@
 $
 
 # Command Line History (newest to oldest):
-:wqa
-:mksession! fiat-lux.vim 
-:w
-:e /home/pi/pilon/packages/minidemo.py
-:e ~/picode/fiat-lux/fiat-lux.py
-:e ~/pilon/packages/minidemo.py
-:vsplit
-:Vsplit
+:q!
 :q
-:split
+:w
 :wq
-:w tmux-mc
+:e
+:s
+:W
+:qa!
 :qa
+:mksession! fiat-lux.vim 
+:vsplit
+:e ../led_driver/led_set.py
+:e ../fsr_read/pressure_sensor.py
+:e led_driver/led_set.py
+:e!
+:e ~/picode/fiat-lux/fiat-lux.py
+:wqa
+:e /home/pi/pilon/packages/minidemo.py
+:e ~/pilon/packages/minidemo.py
+:Vsplit
+:split
+:w tmux-mc
 :e Servo_Example.py
 :e Adafruit_I2C.py
 :e ../fiat-lux/fsr_read/pressure_sensor.py
 :e Adafruit_PWM_Servo_Driver.py
-:W
 :mksession! ~/fiat-lux.vim 
 :mksession! ~/led_servo_driver.vim 
 :e ~/.vimrc
 :w !sudo tee "%"
 :w!
 :W!!
-:q!
 :sav fiat-lux.py
 :mksession! ~/ledsession.vim 
 :e led-push-v2.0.py
@@ -52,7 +59,6 @@ $
 :'<,'> normal @a
 :mksession! ~/ledsession.vim qa
 :mksession! ~/ledsession.vim
-:qa!
 :mksession ~/ledsession.vim!
 :e fiat-lux/main.py
 :mksession ~/ledsession.vim
@@ -111,15 +117,10 @@ $
 :s/#$//g
 :#$d
 :split led-on.py
-:split ./fiat-lux/main.py
-:noh
-:""
-:insert
-:e led-push-2.0.py
-:spl led-push-2.0.py
 
 # Search String History (newest to oldest):
 ? \s\+$
+? ))
 ? \<time\>
 ?/Volumes/Macintosh HD/Users/luca/luca-raspi3
 ?/#
@@ -155,87 +156,40 @@ $
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@1
+@TOTAL_LEDs
 @buttonWasReleased
 @greenBrightness
 @redBrightness
 @2
 @nviSwitchPippo
 @yes
-@1
 @nviSwitchLedLevel
 
 # Input Line History (newest to oldest):
 
 # Registers:
 "0	CHAR	0
-	    if arguments.debug:
-	        app.stack_tracefile = arguments.log + '-lts.log'
-	        if app.isi:
-	            app.isi.tracefile(arguments.log + '-isi.log', False)
-	
-	    app.start()
-	
-	    #
-	    #   Run the application:
-	    #
-	    try:
-	        done = False
-	
-	        while not done:
-	
-	            #
-	            #   Service pilon
-	            #
-	            app.service()
-	
-	            #
-	            #   Interactive user input
-	            #
-	            i, o, e = select.select([sys.stdin], [], [], 0.01)
-	            if i:
-	                try:
-	
-	                    selection = sys.stdin.readline().strip().lower()
-	                    if selection == 'exit':
-	                        print('Winding down...')
-	                        done = True
-	                    elif selection == 'service':
-	                        app.send_service_message()
-	                    elif selection == 'wink':
-	                        # Simulate receipt of a Wink message for testing:
-	                        app.OnWink.fire(app, None)
-	                    else:
-	                        print(
-	                            'Valid commands are "exit", "service", "wink"'
-	                        )
-	                except Exception as e:
-	                    print(e)
-	    finally:
-	
-	        #
-	        #   Stop pilon
-	        #
-	        app.stop()
-	        print("Good bye.")
-	
+	led_legacy_block.nviValue.data.value
 "1	LINE	0
-	    app.programId = arguments.programId
+	   pass
 "2	LINE	0
-	
-"3	LINE	0
-	        app.device_uri = arguments.device
+	if condition:
+"3	BLOCK	1
+	# 
+	# 
 "4	LINE	0
-	    app.device_uri = arguments.device
-"5	LINE	0
-	
-"6	LINE	0
-	
-"7	LINE	0
-	
-"8	LINE	0
-	
-"9	LINE	0
-	            exit()
+	MAX_LEDs = 4                            # Number of hw LEDs supported
+"5	CHAR	0
+	
+"6	CHAR	0
+	\
+"7	CHAR	0
+	\
+"8	CHAR	0
+	n
+"9	CHAR	0
+	'
 "a	CHAR	0
 	^/#d$O#p^dlj^k^
 "b	LINE	0
@@ -245,231 +199,377 @@ $
 "e	LINE	0
 	^d$j$a 	pkdd^/#:noh
 ""-	CHAR	0
-	 
+	-
 
 # File marks:
-'0  196  36  ~/picode/fiat-lux/fiat-lux.py
-'1  5  150  ~/tmconsole
-'2  5  71  ~/tmconsole
-'3  3  71  ~/tmmc
-'4  1  40  ~/.tmuxrc
-'5  1  0  ~/picode/fiat-lux/.git/COMMIT_EDITMSG
-'6  31  19  ~/picode/fiat-lux/led_driver/led_set.py
-'7  57  0  ~/picode/pwm-driver/Servo_Example.py
-'8  53  8  ~/picode/pwm-driver/Servo_Example.py
-'9  58  0  ~/picode/pwm-driver/Servo_Example.py
+'0  1  0  ~/fiat-lux.py
+'1  200  0  ~/pilon/pylon-0.6.0/etc/bootstrap
+'2  1  21  ~/picode/fiat-lux/fiat-lux.py
+'3  35  0  ~/picode/fiat-lux/fiat-lux.py
+'4  3  0  ~/gitsave
+'5  152  20  ~/picode/fiat-lux/fiat-lux.py
+'6  3  165  ~/tmmc
+'7  217  34  ~/picode/fiat-lux/fiat-lux.py
+'8  337  18  ~/picode/fiat-lux/fiat-lux.py
+'9  340  16  ~/picode/fiat-lux/fiat-lux.py
 
 # Jumplist (newest first):
--'  196  36  ~/picode/fiat-lux/fiat-lux.py
--'  193  29  ~/picode/fiat-lux/fiat-lux.py
--'  194  30  ~/picode/fiat-lux/fiat-lux.py
--'  135  56  ~/picode/fiat-lux/fiat-lux.py
--'  136  56  ~/picode/fiat-lux/fiat-lux.py
--'  122  4  ~/picode/fiat-lux/fiat-lux.py
--'  81  0  ~/picode/fiat-lux/fiat-lux.py
--'  88  0  ~/picode/fiat-lux/fiat-lux.py
--'  89  0  ~/picode/fiat-lux/fiat-lux.py
--'  117  0  ~/picode/fiat-lux/fiat-lux.py
--'  155  0  ~/picode/fiat-lux/fiat-lux.py
--'  74  0  ~/picode/fiat-lux/fiat-lux.py
--'  72  0  ~/picode/fiat-lux/fiat-lux.py
--'  112  25  ~/picode/fiat-lux/fiat-lux.py
--'  216  0  ~/picode/fiat-lux/fiat-lux.py
--'  70  1  ~/picode/fiat-lux/fiat-lux.py
--'  330  0  ~/picode/fiat-lux/fiat-lux.py
--'  5  150  ~/tmconsole
--'  1  0  ~/tmconsole
--'  3  71  ~/tmmc
--'  1  0  ~/tmmc
--'  1  40  ~/.tmuxrc
--'  5  0  ~/.tmuxrc
--'  12  33  ~/.tmuxrc
--'  13  0  ~/.tmuxrc
--'  4  0  ~/.tmuxrc
--'  7  0  ~/.tmuxrc
--'  11  0  ~/.tmuxrc
--'  10  0  ~/.tmuxrc
--'  6  0  ~/.tmuxrc
--'  9  0  ~/.tmuxrc
--'  8  0  ~/.tmuxrc
--'  1  0  ~/picode/fiat-lux/.git/COMMIT_EDITMSG
--'  31  19  ~/picode/fiat-lux/led_driver/led_set.py
--'  22  0  ~/picode/fiat-lux/led_driver/led_set.py
--'  36  17  ~/picode/fiat-lux/led_driver/led_set.py
--'  1  0  ~/picode/fiat-lux/led_driver/led_set.py
--'  57  0  ~/picode/pwm-driver/Servo_Example.py
--'  60  8  ~/picode/pwm-driver/Servo_Example.py
--'  59  8  ~/picode/pwm-driver/Servo_Example.py
--'  56  8  ~/picode/pwm-driver/Servo_Example.py
--'  55  8  ~/picode/pwm-driver/Servo_Example.py
--'  53  8  ~/picode/pwm-driver/Servo_Example.py
--'  52  8  ~/picode/pwm-driver/Servo_Example.py
--'  51  8  ~/picode/pwm-driver/Servo_Example.py
--'  61  8  ~/picode/pwm-driver/Servo_Example.py
--'  275  4  ~/picode/fiat-lux/fiat-lux-1.0.2.py
--'  280  21  ~/picode/fiat-lux/fiat-lux-1.0.2.py
--'  57  0  ~/picode/pwm-driver/Servo_Example.py
--'  60  8  ~/picode/pwm-driver/Servo_Example.py
--'  59  8  ~/picode/pwm-driver/Servo_Example.py
--'  56  8  ~/picode/pwm-driver/Servo_Example.py
--'  55  8  ~/picode/pwm-driver/Servo_Example.py
--'  53  8  ~/picode/pwm-driver/Servo_Example.py
--'  52  8  ~/picode/pwm-driver/Servo_Example.py
--'  51  8  ~/picode/pwm-driver/Servo_Example.py
--'  61  8  ~/picode/pwm-driver/Servo_Example.py
--'  57  0  ~/picode/pwm-driver/Servo_Example.py
--'  60  8  ~/picode/pwm-driver/Servo_Example.py
--'  59  8  ~/picode/pwm-driver/Servo_Example.py
--'  56  8  ~/picode/pwm-driver/Servo_Example.py
--'  55  8  ~/picode/pwm-driver/Servo_Example.py
--'  53  8  ~/picode/pwm-driver/Servo_Example.py
--'  52  8  ~/picode/pwm-driver/Servo_Example.py
--'  1  40  ~/.tmuxrc
--'  5  0  ~/.tmuxrc
--'  12  33  ~/.tmuxrc
--'  13  0  ~/.tmuxrc
--'  4  0  ~/.tmuxrc
--'  7  0  ~/.tmuxrc
--'  11  0  ~/.tmuxrc
--'  10  0  ~/.tmuxrc
--'  6  0  ~/.tmuxrc
--'  9  0  ~/.tmuxrc
--'  8  0  ~/.tmuxrc
--'  1  0  ~/picode/fiat-lux/.git/COMMIT_EDITMSG
--'  31  19  ~/picode/fiat-lux/led_driver/led_set.py
--'  22  0  ~/picode/fiat-lux/led_driver/led_set.py
--'  36  17  ~/picode/fiat-lux/led_driver/led_set.py
--'  1  0  ~/picode/fiat-lux/led_driver/led_set.py
--'  57  0  ~/picode/pwm-driver/Servo_Example.py
--'  60  8  ~/picode/pwm-driver/Servo_Example.py
--'  59  8  ~/picode/pwm-driver/Servo_Example.py
--'  56  8  ~/picode/pwm-driver/Servo_Example.py
--'  55  8  ~/picode/pwm-driver/Servo_Example.py
--'  53  8  ~/picode/pwm-driver/Servo_Example.py
--'  52  8  ~/picode/pwm-driver/Servo_Example.py
--'  51  8  ~/picode/pwm-driver/Servo_Example.py
--'  61  8  ~/picode/pwm-driver/Servo_Example.py
--'  275  4  ~/picode/fiat-lux/fiat-lux-1.0.2.py
--'  280  21  ~/picode/fiat-lux/fiat-lux-1.0.2.py
--'  57  0  ~/picode/pwm-driver/Servo_Example.py
+-'  1  0  ~/fiat-lux.py
+-'  200  0  ~/pilon/pylon-0.6.0/etc/bootstrap
+-'  1  0  ~/pilon/pylon-0.6.0/etc/bootstrap
+-'  1  21  ~/picode/fiat-lux/fiat-lux.py
+-'  428  3  ~/picode/fiat-lux/fiat-lux.py
+-'  289  26  ~/picode/fiat-lux/fiat-lux.py
+-'  286  33  ~/picode/fiat-lux/fiat-lux.py
+-'  226  61  ~/picode/fiat-lux/fiat-lux.py
+-'  224  43  ~/picode/fiat-lux/fiat-lux.py
+-'  222  60  ~/picode/fiat-lux/fiat-lux.py
+-'  220  43  ~/picode/fiat-lux/fiat-lux.py
+-'  218  52  ~/picode/fiat-lux/fiat-lux.py
+-'  216  36  ~/picode/fiat-lux/fiat-lux.py
+-'  287  33  ~/picode/fiat-lux/fiat-lux.py
+-'  225  43  ~/picode/fiat-lux/fiat-lux.py
+-'  221  43  ~/picode/fiat-lux/fiat-lux.py
+-'  217  36  ~/picode/fiat-lux/fiat-lux.py
+-'  288  33  ~/picode/fiat-lux/fiat-lux.py
+-'  283  29  ~/picode/fiat-lux/fiat-lux.py
+-'  281  29  ~/picode/fiat-lux/fiat-lux.py
+-'  479  0  ~/picode/fiat-lux/fiat-lux.py
+-'  486  21  ~/picode/fiat-lux/fiat-lux.py
+-'  420  52  ~/picode/fiat-lux/fiat-lux.py
+-'  244  0  ~/picode/fiat-lux/fiat-lux.py
+-'  305  28  ~/picode/fiat-lux/fiat-lux.py
+-'  303  68  ~/picode/fiat-lux/fiat-lux.py
+-'  306  28  ~/picode/fiat-lux/fiat-lux.py
+-'  35  0  ~/picode/fiat-lux/fiat-lux.py
+-'  3  0  ~/gitsave
+-'  152  8  ~/picode/fiat-lux/fiat-lux.py
+-'  3  165  ~/tmmc
+-'  40  0  ~/picode/fiat-lux/fiat-lux.py
+-'  337  8  ~/picode/fiat-lux/fiat-lux.py
+-'  340  8  ~/picode/fiat-lux/fiat-lux.py
+-'  277  11  ~/picode/fiat-lux/fiat-lux.py
+-'  239  74  ~/picode/fiat-lux/fiat-lux.py
+-'  180  73  ~/picode/fiat-lux/fiat-lux.py
+-'  259  40  ~/picode/fiat-lux/fiat-lux.py
+-'  256  64  ~/picode/fiat-lux/fiat-lux.py
+-'  179  8  ~/picode/fiat-lux/fiat-lux.py
+-'  181  4  ~/picode/fiat-lux/fiat-lux.py
+-'  189  11  ~/picode/fiat-lux/fiat-lux.py
+-'  336  1  ~/picode/fiat-lux/fiat-lux.py
+-'  279  26  ~/picode/fiat-lux/fiat-lux.py
+-'  334  12  ~/picode/fiat-lux/fiat-lux.py
+-'  178  4  ~/picode/fiat-lux/fiat-lux.py
+-'  3  8  ~/wificonfigx
+-'  1  0  ~/wificonfigx
+-'  3  6  ~/Desktop/wificonfigx
+-'  1  0  ~/Desktop/wificonfigx
+-'  208  26  ~/picode/fiat-lux/fiat-lux.py
+-'  205  0  ~/picode/fiat-lux/fiat-lux.py
+-'  201  30  ~/picode/fiat-lux/fiat-lux.py
+-'  199  0  ~/picode/fiat-lux/fiat-lux.py
+-'  193  4  ~/picode/fiat-lux/fiat-lux.py
+-'  191  6  ~/picode/fiat-lux/fiat-lux.py
+-'  187  4  ~/picode/fiat-lux/fiat-lux.py
+-'  185  6  ~/picode/fiat-lux/fiat-lux.py
+-'  206  0  ~/picode/fiat-lux/fiat-lux.py
+-'  200  25  ~/picode/fiat-lux/fiat-lux.py
+-'  192  6  ~/picode/fiat-lux/fiat-lux.py
+-'  186  6  ~/picode/fiat-lux/fiat-lux.py
+-'  207  23  ~/picode/fiat-lux/fiat-lux.py
+-'  172  4  ~/picode/fiat-lux/fiat-lux.py
+-'  1  0  ~/picode/fiat-lux/fiat-lux
+-'  7  52  ~/tmconsole
+-'  5  67  ~/tmconsole
+-'  25  0  ~/picode/fiat-lux/fiat-lux.py
+-'  302  89  ~/picode/fiat-lux/fiat-lux.py
+-'  179  12  ~/pilon/packages/minidemo.py
+-'  7  52  ~/tmconsole
+-'  5  67  ~/tmconsole
+-'  179  12  ~/pilon/packages/minidemo.py
+-'  1  0  ~/picode/fiat-lux/fiat-lux
+-'  7  52  ~/tmconsole
+-'  3  0  ~/gitsave
+-'  151  8  ~/picode/fiat-lux/fiat-lux.py
+-'  477  0  ~/picode/fiat-lux/fiat-lux.py
+-'  484  21  ~/picode/fiat-lux/fiat-lux.py
+-'  1  21  ~/picode/fiat-lux/fiat-lux.py
+-'  428  3  ~/picode/fiat-lux/fiat-lux.py
+-'  289  26  ~/picode/fiat-lux/fiat-lux.py
+-'  286  33  ~/picode/fiat-lux/fiat-lux.py
+-'  226  61  ~/picode/fiat-lux/fiat-lux.py
+-'  224  43  ~/picode/fiat-lux/fiat-lux.py
+-'  222  60  ~/picode/fiat-lux/fiat-lux.py
+-'  220  43  ~/picode/fiat-lux/fiat-lux.py
+-'  218  52  ~/picode/fiat-lux/fiat-lux.py
+-'  216  36  ~/picode/fiat-lux/fiat-lux.py
+-'  287  33  ~/picode/fiat-lux/fiat-lux.py
+-'  225  43  ~/picode/fiat-lux/fiat-lux.py
+-'  221  43  ~/picode/fiat-lux/fiat-lux.py
+-'  217  36  ~/picode/fiat-lux/fiat-lux.py
+-'  288  33  ~/picode/fiat-lux/fiat-lux.py
+-'  283  29  ~/picode/fiat-lux/fiat-lux.py
+-'  281  29  ~/picode/fiat-lux/fiat-lux.py
+-'  479  0  ~/picode/fiat-lux/fiat-lux.py
+-'  486  21  ~/picode/fiat-lux/fiat-lux.py
+-'  420  52  ~/picode/fiat-lux/fiat-lux.py
 
 # History of marks within files (newest to oldest):
 
-> ~/picode/fiat-lux/fiat-lux.py
-	"	196	36
-	^	190	50
-	.	190	49
-	+	242	0
-	+	237	0
-	+	240	15
-	+	241	15
-	+	242	15
-	+	243	15
-	+	233	78
-	+	233	0
-	+	234	7
-	+	347	0
-	+	352	0
-	+	332	20
-	+	334	0
-	+	332	14
-	+	333	0
-	+	275	0
-	+	228	2
-	+	227	2
-	+	226	2
-	+	230	0
-	+	2	0
-	+	4	0
-	+	2	0
-	+	5	0
-	+	16	0
-	+	14	0
-	+	67	20
-	+	68	0
-	+	67	21
-	+	70	1
-	+	66	0
-	+	82	0
-	+	82	12
-	+	82	0
-	+	82	3
-	+	82	4
-	+	82	4
-	+	82	0
-	+	82	0
-	+	82	0
-	+	82	0
-	+	216	0
-	+	89	1
-	+	155	62
-	+	108	4
-	+	109	8
-	+	110	8
-	+	111	12
-	+	112	11
-	+	112	34
-	+	113	8
-	+	115	7
-	+	156	0
-	+	115	0
-	+	117	0
-	+	115	0
-	+	79	0
-	+	75	0
-	+	79	0
-	+	81	10
-	+	117	2
-	+	117	0
-	+	82	3
-	+	83	3
-	+	84	3
-	+	85	7
-	+	86	7
-	+	87	3
-	+	89	0
-	+	81	0
-	+	89	0
-	+	103	0
-	+	216	0
-	+	214	0
-	+	217	0
-	+	153	4
-	+	121	4
-	+	122	0
-	+	120	0
-	+	152	0
-	+	154	0
-	+	149	0
-	+	148	19
-	+	149	0
-	+	121	0
-	+	130	0
-	+	133	0
-	+	136	0
-	+	128	69
-	+	129	0
-	+	132	0
-	+	135	0
-	+	128	0
-	+	155	0
-	+	150	0
-	+	150	7
-	+	151	48
-	+	149	45
-	+	190	45
-	+	190	49
+> ~/fiat-lux.py
+	"	1	0
+	.	1	0
+	+	1	0
 
-> ~/pilon/packages/minidemo.py
-	"	180	0
+> ~/pilon/pylon-0.6.0/etc/bootstrap
+	"	200	0
+
+> ~/picode/fiat-lux/fiat-lux.py
+	"	1	21
+	^	431	27
+	.	1	0
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	8
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	16
+	+	348	8
+	+	348	0
+	+	348	0
+	+	340	18
+	+	341	0
+	+	340	18
+	+	340	0
+	+	340	8
+	+	340	8
+	+	340	15
+	+	340	0
+	+	278	0
+	+	277	10
+	+	63	14
+	+	64	10
+	+	337	18
+	+	337	0
+	+	35	67
+	+	216	40
+	+	217	0
+	+	152	20
+	+	35	0
+	+	303	68
+	+	305	28
+	+	244	0
+	+	420	83
+	+	486	21
+	+	245	0
+	+	281	27
+	+	281	0
+	+	279	0
+	+	281	50
+	+	281	69
+	+	284	0
+	+	281	51
+	+	282	49
+	+	281	0
+	+	291	11
+	+	280	0
+	+	289	26
+	+	222	60
+	+	289	29
+	+	218	56
+	+	218	54
+	+	222	62
+	+	226	63
+	+	57	0
+	+	58	0
+	+	433	53
+	+	434	37
+	+	435	37
+	+	434	37
+	+	435	38
+	+	434	37
+	+	432	33
+	+	431	39
+	+	432	0
+	+	428	44
+	+	431	0
+	+	431	0
+	+	428	0
+	+	430	27
+	+	429	29
+	+	428	23
+	+	431	26
+	+	1	0
 
 > ~/gitsave
-	"	3	41
+	"	3	0
 	^	3	42
-	.	3	41
+	.	3	0
 	+	2	0
 	+	1	2
-	+	3	41
+	+	3	0
+
+> ~/tmmc
+	"	3	165
+	^	3	23
+	.	4	0
+	+	3	0
+	+	3	71
+	+	3	85
+	+	3	71
+	+	3	71
+	+	3	71
+	+	3	166
+	+	3	170
+	+	3	71
+	+	3	151
+	+	4	0
+
+> ~/picode/fiat-lux/bernd-examples/minidemo.py
+	"	173	0
+	^	170	73
+	.	170	73
+	+	159	29
+	+	171	29
+	+	170	73
+	+	171	0
+	+	159	0
+	+	155	0
+	+	154	0
+	+	155	0
+	+	146	0
+	+	144	0
+	+	171	0
+	+	172	0
+	+	170	73
+
+> ~/wificonfigx
+	"	3	8
+	^	3	9
+	.	3	8
+	+	3	8
+
+> ~/Desktop/wificonfigx
+	"	3	6
+	^	3	7
+	.	3	6
+	+	3	6
+
+> ~/picode/fiat-lux/fiat-lux
+	"	1	0
+
+> ~/tmconsole
+	"	7	52
+	^	7	53
+	.	7	52
+	+	5	147
+	+	5	71
+	+	5	71
+	+	5	198
+	+	5	30
+	+	8	0
+	+	6	0
+	+	5	71
+	+	5	71
+	+	5	71
+	+	5	71
+	+	5	165
+	+	5	169
+	+	5	71
+	+	5	150
+	+	5	0
+	+	7	0
+	+	5	0
+	+	7	52
+
+> ~/pilon/packages/minidemo.py
+	"	169	73
+	^	169	79
+	.	169	0
+	+	169	0
+
+> ~/picode/fiat-lux/NERD_tree_1
+	"	8	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> /usr/share/vim/vim73/doc/help.txt
+	"	6	0
+
+> ~/picode/fiat-lux/led_driver/led_set.py
+	"	14	6
+	^	12	6
+	.	12	6
+	+	17	0
+	+	36	3
+	+	36	0
+	+	29	0
+	+	36	0
+	+	34	11
+	+	29	7
+	+	30	0
+	+	34	33
+	+	36	0
+	+	20	13
+	+	16	4
+	+	15	4
+	+	23	13
+	+	25	13
+	+	31	13
+	+	33	11
+	+	35	0
+	+	34	0
+	+	21	0
+	+	21	0
+	+	22	19
+	+	18	45
+	+	24	65
+	+	33	17
+	+	12	0
+	+	33	17
+	+	27	8
+	+	12	6
+
+> ~/picode/fiat-lux/fsr_read/pressure_sensor.py
+	"	14	10
+	^	54	11
+	.	54	10
+	+	31	0
+	+	13	10
+	+	19	8
+	+	18	0
+	+	19	13
+	+	57	0
+	+	54	10
 
 > ~/.netrc
 	"	1	0
@@ -483,37 +583,6 @@ $
 	+	2	15
 	+	3	28
 	+	1	0
-
-> ~/tmconsole
-	"	5	150
-	^	5	151
-	.	5	150
-	+	5	147
-	+	5	71
-	+	5	71
-	+	5	198
-	+	5	30
-	+	7	0
-	+	6	0
-	+	5	71
-	+	5	71
-	+	5	71
-	+	5	71
-	+	5	165
-	+	5	169
-	+	5	71
-	+	5	150
-
-> ~/tmmc
-	"	3	71
-	^	3	72
-	.	3	71
-	+	3	0
-	+	3	71
-	+	3	85
-	+	3	71
-	+	3	71
-	+	3	71
 
 > ~/.tmuxrc
 	"	1	40
@@ -535,33 +604,6 @@ $
 
 > ~/picode/fiat-lux/.git/COMMIT_EDITMSG
 	"	1	0
-
-> ~/picode/fiat-lux/led_driver/led_set.py
-	"	31	19
-	^	23	20
-	.	23	19
-	+	18	0
-	+	37	3
-	+	37	0
-	+	30	0
-	+	37	0
-	+	35	11
-	+	30	7
-	+	31	0
-	+	35	33
-	+	37	0
-	+	21	13
-	+	17	4
-	+	16	4
-	+	24	13
-	+	26	13
-	+	32	13
-	+	34	11
-	+	36	0
-	+	35	0
-	+	22	0
-	+	22	0
-	+	23	19
 
 > ~/picode/fiat-lux/fiat-lux-1.0.2.py
 	"	275	4
@@ -849,9 +891,6 @@ $
 > ~/picode/pwm-driver/Adafruit_PWM_Servo_Driver.py
 	"	11	0
 
-> ~/picode/fiat-lux/fsr_read/pressure_sensor.py
-	"	2	0
-
 > ~/picode/fiat-lux/pwm-driver/Servo_Example.py
 	"	1	0
 	^	39	22
@@ -962,11 +1001,6 @@ $
 	^	282	80
 	.	282	79
 	+	282	79
-
-> ~/picode/fiat-lux/NERD_tree_1
-	"	4	0
-	.	1	0
-	+	1	0
 
 > ~/picode/led-push.py
 	"	1	0
@@ -1561,9 +1595,6 @@ $
 	"	7	0
 	.	1	0
 	+	1	0
-
-> /usr/share/vim/vim73/doc/help.txt
-	"	1	0
 
 > ~/logout
 	"	3	0

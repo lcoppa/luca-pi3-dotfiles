@@ -1,306 +1,3 @@
-sudo raspiconfig
-sudo raspi-config 
-wpa_gui 
-exit
-ip addr
-sudo apt-get update
-sudo reboot
-sudo apt-get update
-sudo apt-get upgrade
-apt-get
-sudo apt-get dist-upgrade
-sudo apt-get install python-dev vim ssh ipython3 ipython3-notebook xrdp tightvncserver geany git python3-rpi.gpio python-smbus i2c-tools libcap2-bin avahi-daemon
-sudo apt-get 
-sudo apt-get autoremove
-sudo reboot
-curl https://raw.github.com/adafruit/Adafruit-WebIDE/alpha/scripts/install.sh | sudo sh
-sudo reboot
-sudo shutdown now
-ipython3 
-exit
-passwd
-sudo service adafruit-webide start
-sudo service adafruit-webide.sh start
-sudo shutdown now
-cd code/
-ll
-cd ..
-vim .bashrc
-cd code
-ls
-python-config 
-python-config --help
-man python-config 
-python3 led-on.py 
-sudo python3 led-on.py 
-fg
-bg
-geany &
-vim led-on.py 
-sudo python3 led-on.py 
-sudo shutdown now
-sudo vim /etc/hosts
-sudo hostname luca-raspi3
-hostname
-sudo vim /etc/hostname 
-sudo reboot
-ll
-man rsync
-rsync -avz -e "sshpass '2oche' ssh -l admin" /home/pi/ LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3
-sudo apt-get install sshpass
-rsync -avz -e "sshpass '2oche' ssh -l admin" /home/pi/ LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3
-sshpass 
-rsync -avz -e "sshpass -p '2oche' ssh -l admin" /home/pi/ LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3
-ll
-cat .Xauthority 
-
-ll
-cd geany/
-ll
-ssh admin@192.168.1.2
-ssh admin@LucaDS231.local
-pwd
-rsync -a -e ssh /home/pi/ admin@LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3
-rsync -v -a -e ssh /home/pi/ admin@LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3
-vim ./logout
-man rsync
-mv ./logout ~
-ll
-cd ~
-ll
-vim logout 
-chmod 744 logout 
-cp logout reboot
-ll
-vim reboot 
-vim logout 
-reboot
-geany
-geany
-ll
-cd code
-ll
-mv led-on.py led-on.py3
-mv led-push.py led-push.py3
-ll
-exit
-./logout
-ll
-cp reboot backup
-eric
-sudo apt-get install eric
-eric &
-fg
-bg
-ll
-nc
-mc
-sudo apt-get infor mc
-sudo apt-get info mc
-sudo apt-get install mc
-mc
-./backup
-ll
-sudo eric
-exit
-backup
-sudo eric &
-lxterminal &
-geany &
-exit
-logout
-./logout
-./led-on.py
-sudo 
-sudo led-on.py
-led-on.py 
-sudo led-on.py 
-sudo ./led-on.py 
-./led-on.py
-sshpass -p '2oche' ssh -l admin LucaDS231.local:/volume1/homes/admin/raspberry-pi_bak/luca-raspi3
-sshpass -p '2oche' ssh -l admin LucaDS231.local
-vim led-on.py 
-sudp python3 led-on.py 
-sudo python3 led-on.py 
-cd 
-vim .bashrc 
-p3
-exit
-mc
-ll
-backup 
-ipython3
-sudo ipython3
-ll
-cd code
-ll
-cat led-on.py 
-mc
-fg
-mc
-exit
-bg
-fg
-cd code
-p3 led-on.py 
-exit
-ls
-ll
-sudo apt-get install eric5
-exit
-lxterminal 
-exit
-ll
-top
-cdcdcd
-lxterminal 
-ll
-vim .vimrc
-backup 
-vim backup 
-man rsync
-vim backup 
-backup 
-cd ./vi
-ll
-cd .config/
-ll
-..
-cd
-mkdir ./.vim/
-mkdir ./.vim/{autoload,bundle}
-cd .vim/
-ll
-git
-cd ..
-ll
-git init
-cd .git/
-ll
-cd
-cd .vim/
-git init
-cd ..
-rm .git/
-rm -r .git
-ll
-cd .vim/
-ll
-curl -Sso ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-ll
-cd autoload/
-ll
-cd .. ; ll
-cd autoload/ ;ll
-cat pathogen.vim 
-cd ..
-cd ..;vim .vimrc
-vim .vimrc 
-cd ./vim
-cd .vim/
-mkdir snippets
-vim /home/pi/.vim/snippets/python.snippets
-cd
-cd code
-vim led-push.py 
-cd ..
-backup 
-cd .vim/snippets/
-ll
-cat python.snippets 
-cd ..
-ls
-ll
-cd bundle/
-ll
-cd snipmate/
-ll
-less README.markdown 
-cd doc/
-ll
-less snipMate.txt 
-cd ../..
-cd ..
-ll
-cd snippets/
-ll
-vim python.snippets 
-cd
-vim .vimrc 
-vim .vim/snippets/python.snippets 
-vim .vimrc 
-vim .vim/snippets/python.snippets 
-cd .vim/
-git submodule
-git help
-git help remove
-git help delete
-git help del
-git help add
-git help rm
-git submodule rm -n snipmate
-git help submodule
-git -n rm snipmate
-git rm -n snipmate
-git rm -n https://github.com/msanders/snipmate.vim.git bundle/snipmate
-git help rm
-git rm -n ./bundle/snipmate
-git rm  ./bundle/snipmate
-git rm  ./bundle/snipmate/
-git rm  ./bundle/snipmate/*
-git rm -n -r ./bundle/snipmate
-git rm -r ./bundle/snipmate
-ll
-cd bundle/
-ll
-rm -r snipmate/
-cd ..
-git rm -r ./bundle/snipmate/
-git submodule add https://github.com/garbas/vim-snipmate.git
-git submodule init
-ll
-rm -r vim-snipmate/
-git submodule add https://github.com/garbas/vim-snipmate.git bundle/snipmate
-git submodule add https://github.com/garbas/vim-snipmate.git bundle/vim-snipmate
-cd bundle/
-ll
-git submodule init
-cd ..
-git submodule init
-git submodule update
-ll ./bundle/
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-ls
-ll
-vim .gitmodules 
-git add .gitmodules
-vim .git/config 
-git rm -n --cached bundle/snipmate
-git rm  --cached bundle/snipmate
-git rm --cached bundle/snipmate
-git rm --cached vim-snipmate
-ll
-git rm --cached vim-snipmate
-cd .git/
-ll
-cd modules/
-ll
-mc
-cd ..
-git
-git commit
-git config user.name "lcoppa"
-git commit
-git help commit
-git commit
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-mc
-vim snippets/python.snippets 
-less bundle/vim-snipmate/README.rst 
 git submodule add https://github.com/tomtom/tlib_vim.git bundle/tlib_vim
 git submodule add https://github.com/MarcWeber/vim-addon-mw-utils.git bundle/vim-addon-mw-utils
 git submodule add https://github.com/honza/vim-snippets.git bundle/vim-smippets
@@ -1921,3 +1618,383 @@ tmux attach-session -t mc
 tmux attach-session -t mc
 tmux attach-session -t console
 tmux attach-session -t mc
+tmux attach-session -t console
+vim fiat-lux.py 
+vim -S fiat-lux.vim 
+exit
+ll
+~/backup-to-lucaDS231 
+git add **
+git status
+git commit -m "Continue integration of source from bernd example""
+"
+git push -u origin master 
+echo git
+echo git status
+echo git status && git add ** && git commit -m "$1" && git push -u origin master > ~/gitsave
+echo "git status && git add ** && git commit -m "$1" && git push -u origin master" > ~/gitsave
+cd
+ll
+ll gitsave 
+chmod 744 gitsave 
+ll gitsave 
+cd picode/fiat-lux
+~/gitsave "test push"
+cat ~/backup-to-lucaDS231 
+vim /home/pi/gitsave 
+~/gitsave "test push"
+~/backup-to-lucaDS231 
+vim /home/pi/gitsave 
+git status 
+git add fiat-lux.vim
+git status 
+ll
+git status 
+git add -u
+git status 
+git reset
+git add .
+git status 
+git reset
+vim /home/pi/gitsave 
+cp ~/gitsave ~/.netrc
+vim /home/pi/.netrc 
+~/gitsave "test push"
+git remote -v
+git remote set-url origin git@github.com:lcoppa/fiat-lux.git
+git remote -v
+git status 
+git add -u
+git status 
+git commit -m "commit for test push, no changes"
+git push -u origin master 
+git add -u
+git status 
+git commit -m "commit for test push, no changes"
+git push -u origin master 
+rm ~/.netrc 
+git status 
+git add -u
+git status 
+git commit -m "commit for test push, no changes"
+git push -u origin master 
+~/gitsave "commit for test push, no changes"
+vim /home/pi/gitsave 
+~/gitsave "commit for test push, no changes"
+git status 
+~/gitsave "updated vim session config"
+git status 
+~/gitsave "continue mod towards alpha5"
+git pull 
+ls
+ll
+chmod 644 UNVTipcLampActuator.py 
+ll
+~/gitsave "Port to aplha 5: cleaned up all my code with Pylint in VIM. Now debugging begins"
+sipython3 fiat-lux.py 
+exit
+exit
+ll
+git add ./bin/*
+git add .ssh/*
+git add .vim/*
+git status
+git add .vim/**
+git add .ssh/**
+git add bin/**
+git add bin/** cd "`printf "%b" '\0057home\0057pi\0057\0056local'`"
+git add .config/**
+git add tm*
+git status
+git add re*
+git add we*
+git add uploads
+git add scp*
+git status
+git .bash*
+git add .bas*
+git add .gitconfig
+git add .profile
+git status
+git add apt-refresh-all
+git add backup-to-lucaDS231
+git add clone-to-debian-full-vm
+git add gitsave
+git add *.vim
+git status
+git add .vimrc
+git add .viminfo
+git status
+git add logoff
+git status
+git add .vim/bundle/vim-multiple-cursors/**
+git checkout .vim/bundle/**
+git status
+git checkout .vim/*
+git status
+git checkout -- .vim/*
+git status
+cd "`printf "%b" '\0057home\0057pi\0057\0056vim'`"
+git status
+git rm --cached .vim/bundle/**
+git status
+git rm --cached .vim/autoload/*
+git rm --cached .vim/dontload/
+git rm --cached .vim/dontload/*
+git rm --cached .vim/dontload/**
+git status
+git add .tmux.conf
+ls lib
+git status
+git commit init
+git commit -m "initial commit"
+git status
+git remote add origin git@github.com:lcoppa/luca-pi3-dotfiles.git
+git push -u origin master
+git status 
+git rm --cached .ssh/*
+git add .ssh/id_rsa.pub
+cat .ssh/known_hosts 
+git rm --cached .ssh/*
+git status 
+git commit -m "initial commit"
+git rm --cached .ssh/*
+git rm --cached .ssh/id_rsa.pub
+git commit -m "initial commit"
+git status
+git push -u origin master
+git rm --cached tmux-*
+git commit -m "initial commit"
+git push -u origin master
+z
+clear
+ssh-keygen -t rsa
+cat .ssh/id_rsa.pub 
+users
+cd picode/
+ls
+ifconfig 
+ll
+cd fiat-lux
+ll
+shutdown -now
+su shutdown -now
+sudo shutdown -now
+sudo shutdown
+sudo shutdown -t now
+sudo shutdown -t 1
+sudo shutdown now
+clear
+ll
+ls
+git init
+git add ./*
+git status
+git reset
+git status
+git init
+git add ./
+git stat
+git status 
+git reset
+git init
+tmux attach-session -t mc
+exit
+exit
+vim -S fiat-lux.vim 
+exit
+vim fiat-lux
+ll
+vim fiat-lux.py 
+fiat-lux.py 
+sipython3 fiat-lux.py 
+tmux attach-session -t console
+./tmconsole 
+sudo shutdown now
+tmux attach-session -t mc
+./tmmc 
+tmux attach-session -t console
+exit
+rm Adafruit_I2C.cpython-32.pyc 
+cd ..
+sudo rm -r pwm_utils/
+tmux attach-session -t mc
+cd picode/fiat-lux
+ll
+git status
+git add ./**/__init__.py
+git status
+rm led_driver/pwm_utils/
+add bernd-examples/**
+git add bernd-examples/**
+git status
+git add fiat-lux-nvd/**
+git add fiat-lux-rtk.log
+git status
+~/gitsave "Debugged version alpha 5: Everthing seems fine, except I cannot see the device from my windows vm in the mac. I cannot see Bernd examples either though. I need to investigate why. With alpha 3 I could..."
+git status
+git push -u origin master
+ifconfig 
+startx
+git push -u origin master
+git status
+mc
+git status
+git push -u origin master
+exit
+tmux attach-session -t console
+startx
+lxsession 
+exit
+ll
+cd bernd-examples/
+ll
+ifconfig 
+exit
+ll
+./tmconsole 
+sudo shutdown now
+ifconfig 
+exit
+ifconfig 
+ll
+ls
+vim wificonfigx 
+chmod 744 wificonfigx 
+./wificonfigx 
+ifconfig 
+exit
+./wificonfigx 
+cd picode/fiat-lux
+ll
+./fiat-lux.py 
+python3
+python3 -tt
+./fiat-lux.py 
+ipython3 fiat-lux.py 
+spython3 fiat-lux.py 
+vim fiat-lux.py 
+spython3 fiat-lux.py 
+vim fiat-lux.py 
+cd bernd-examples/
+ll
+./minidemo.py 
+./minidemo.py -d 172.10.10.10
+cd ~
+./tmconsole 
+ifconfig 
+./tmconsole 
+./tmattach-to console
+exit
+vim fiat-lux.py 
+exit
+cd bernd-examples/
+./minidemo.py 
+./minidemo.py -d 172.20.10.10
+vim minidemo.py 
+./minidemo.py -d 172.20.10.10
+vim minidemo.py 
+./minidemo.py -d 172.20.10.10
+vim minidemo.py 
+./minidemo.py -d 172.20.10.10
+vim minidemo.py 
+./minidemo.py -d 172.20.10.10
+cd ..
+./fiat-lux.py 
+more bernd-examples/minidemo.py
+./fiat-lux.py 
+ll
+rm *.log
+ll
+cd fiat-lux-nvd/
+ll
+cd ..
+sudo rm -r fiat-lux-nvd/
+ll
+./fiat-lux.py 
+"Debugged version alpha 5: Everthing seems fine, except I cannot see the device from my windows vm in the mac. I cannot see Bernd examples either though. I need to investigate why. With alpha 3 I could..."
+~/gitsave "Cosmetic fixes: changed some user facing messages; still cannot see the app from the config server"
+git status 
+git add resources-06-09-2013-08.56/**
+git status 
+~/gitsave "Added then removed the new resource files"
+git status | more
+git status
+exit
+tmux attach-session -t console
+exit
+sudo shutdown now
+tmux attach-session -t mc
+./tmmc 
+tmux attach-session -t mc
+./tmmc 
+./tmattach-to mc
+tmux attach-session -t console
+ll
+cd picode/fiat-lux
+ll
+git pull
+~/tmconsole 
+tmux attach-session -t mc
+tmux attach-session -t console
+vim fiat-lux.py 
+exit
+~/backup-to-lucaDS231 
+git pull
+git status
+git diff fiat-lux.py
+git stash
+git pull
+chmod 744 fiat-lux.py 
+./fiat-lux.py 
+ll
+chmod 755 fiat-lux.py 
+./fiat-lux.py 
+spython3 fiat-lux.py 
+~/backup-to-lucaDS231 
+exit
+exit
+sudo apt-get dist-update
+sudo apt-get dist-upgrade
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get autoclean
+sudo apt-get autoremove
+./backup-to-lucaDS231 
+sudo ./backup-to-lucaDS231 
+./backup-to-lucaDS231 
+./backup-to-lucaDS231 exit
+exit
+tmux attach-session -t mc
+OA
+cd /etc/init.d/
+ll
+ls
+cd ssh
+ll
+cd ..
+cd samba/
+ll
+cd 
+cat apt-refresh-all 
+./apt-refresh-all 
+mc
+cd pilon/
+ll
+cd pylon-0.6.0/
+ll
+cd etc/
+ll
+vim bootstrap 
+cd ..
+etc/bootstrap 
+mc
+exit
+exit
+tmux attach-session -t mc
+cd picode/fiat-lux
+git ststus
+git status
+exit

@@ -109,3 +109,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# initialize shell for use with Pilon
+test -r /home/pi/pilon/pylon-0.6.0/etc/bashrc.user && source /home/pi/pilon/pylon-0.6.0/etc/bashrc.user
