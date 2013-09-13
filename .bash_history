@@ -1,206 +1,3 @@
-git submodule add https://github.com/tomtom/tlib_vim.git bundle/tlib_vim
-git submodule add https://github.com/MarcWeber/vim-addon-mw-utils.git bundle/vim-addon-mw-utils
-git submodule add https://github.com/honza/vim-snippets.git bundle/vim-smippets
-git submodule add https://github.com/honza/vim-snippets.git bundle/vim-snippets
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-vim --version
-sudo apt-get install ack
-sudo apt-get install 
-cd .vim/
-ll
-cd bundle/
-ll
-cd..
-cd ..
-git submodule add https://github.com/msanders/snipmate.vim.git bundle/snipmate
-ll
-cd bundle/;ll
-cd snipmate/
-ll
-cd ../..
-git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
-git submodule add https://github.com/msanders/snipmate.vim.git bundle/snipmate
-git submodule add https://github.com/tpope/vim-surround.git bundle/surround
-git submodule add https://github.com/tpope/vim-git.git bundle/git
-git submodule add https://github.com/ervandew/supertab.git bundle/supertab
-git submodule add https://github.com/sontek/minibufexpl.vim.git bundle/minibufexpl
-git submodule add https://github.com/wincent/Command-T.git bundle/command-t
-git submodule add https://github.com/mitechie/pyflakes-pathogen.git
-git submodule add https://github.com/mileszs/ack.vim.git bundle/ack
-git submodule add https://github.com/sjl/gundo.vim.git bundle/gundo
-git submodule add https://github.com/fs111/pydoc.vim.git bundle/pydoc
-git submodule add https://github.com/vim-scripts/pep8.git bundle/pep8
-git submodule add https://github.com/alfredodeza/pytest.vim.git bundle/py.test
-git submodule add https://github.com/reinh/vim-makegreen bundle/makegreen
-git submodule add https://github.com/vim-scripts/TaskList.vim.git bundle/tasklist
-git submodule add https://github.com/vim-scripts/The-NERD-tree.git bundle/nerdtree
-git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-vim ../vimrc
-cd ..
-vim /home/pi/.vimrc 
-cd code
-ll
-vim led-on.py 
-OQ
-git clone https://github.com/sontek/dotfiles.git
-git init
-cd code/
-vim led-on.py 
-mc
-vim led-on.py 
-cd
-cp backup aptrefresh
-vim aptrefresh 
-mv aptrefresh aptrefrall
-backup 
-cd code
-vim led-on.py 
-exit
-mc
-git submodule add https://github.com/tomtom/tlib_vim.git bundle/tlib
-git submodule add https://github.com/MarcWeber/vim-addon-mw-utils.git bundle/mw-utils
-git submodule add https://github.com/honza/vim-snippets.git bundle/snippets
-git submodule add https://github.com/tpope/vim-fugitive.git bundle/fugitive
-git submodule add https://github.com/tpope/vim-surround.git bundle/surround
-git submodule add https://github.com/tpope/vim-git.git bundle/git
-git submodule add https://github.com/ervandew/supertab.git bundle/supertab
-git submodule add https://github.com/fholgado/minibufexpl.vim.git  bundle/minibufexpl
-git submodule add https://github.com/sjl/gundo.vim.git bundle/gundo
-git submodule add https://github.com/fs111/pydoc.vim.git bundle/pydoc
-git submodule add https://github.com/nvie/vim-flake8.git bundle/flakes8
-git submodule add https://github.com/alfredodeza/pytest.vim.git bundle/pytest
-git submodule add https://github.com/reinh/vim-makegreen bundle/makegreen
-git submodule add https://github.com/vim-scripts/TaskList.vim.git bundle/tasklist
-git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
-git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-ll
-cd .vim/
-ll
-git submodule add https://github.com/tomtom/tlib_vim.git bundle/tlib
-git submodule add https://github.com/MarcWeber/vim-addon-mw-utils.git bundle/mw-utils
-git submodule add https://github.com/honza/vim-snippets.git bundle/snippets
-git submodule add https://github.com/tpope/vim-fugitive.git bundle/fugitive
-git submodule add https://github.com/tpope/vim-surround.git bundle/surround
-git submodule add https://github.com/tpope/vim-git.git bundle/git
-git submodule add https://github.com/ervandew/supertab.git bundle/supertab
-git submodule add https://github.com/fholgado/minibufexpl.vim.git  bundle/minibufexpl
-git submodule add https://github.com/sjl/gundo.vim.git bundle/gundo
-git submodule add https://github.com/fs111/pydoc.vim.git bundle/pydoc
-git submodule add https://github.com/nvie/vim-flake8.git bundle/flakes8
-git submodule add https://github.com/alfredodeza/pytest.vim.git bundle/pytest
-git submodule add https://github.com/reinh/vim-makegreen bundle/makegreen
-git submodule add https://github.com/vim-scripts/TaskList.vim.git bundle/tasklist
-git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
-git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-vim snippets/python.snippets 
-cd
-vim .vimrc 
-vim /.vim/snippets/python.snippets 
-vim .vim/snippets/python.snippets 
-sudo apt-get install pip
-sudo apt-get install python-pip
-sudo apt-get install python-dev-all
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
-sudo apt-get autoclean
-sudo apt-get
-sudo apt-get autoremove
-vim aptrefrall 
-sudo apt-get install python-dev-all
-sudo pip install rpi-gpio
-sudo pip install rope_py3k 
-sudo pip install ropmode 
-sudo pip install ropemode 
-reboot
-l
-ll
-exit
-ll
-cd code
-vim led-on.py 
-vim
-cd 
-sudo apt-get install vim-gui-common
-sudo apt-get install vim-runtime
-sudo apt-get install vim-common
-rvim
-vim
-cd code/
-vim led-on.py 
-top
-cp backup webide
-vim webide 
-webide stop
-top
-ll
-vim reboot 
-vim logout 
-backup 
-sudo backup 
-sudo ./backup 
-backup 
-ll
-mv aptrefrall apt-refresh-all
-cd code/
-vim led-on.py 
-sudo pip install flake8
-vim led-on.py 
-ipython3 
-sudo ipython3 
-cd code
-idle3
-idle-python3.2 
-ipython3 
-sudo ipython3 
-cd ~/.vim
-git submodule add https://github.com/klen/python-mode.git bundles/python-mode
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-cd ..
-backup
-vim .vimrc
-cd .vim/
-ll
-git submodule add https://github.com/gmarik/vundle.git bundle/vundle
-git submodule add https://github.com/klen/python-mode.git bundle/python-mode
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-cd ..
-backup 
-git submodule add https://github.com/Lokaltog/powerline.git         bundle/powerline
-cd .vim/
-git submodule add https://github.com/Lokaltog/powerline.git         bundle/powerline
-git submodule init
-git submodule update
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-vim --version
-cd
-backup 
-vim .vimrc
-exit
-cd code/
-vim led-on.py 
 cd ..
 mc
 exit
@@ -1997,4 +1794,207 @@ tmux attach-session -t mc
 cd picode/fiat-lux
 git ststus
 git status
+exit
+tmux attach-session -t mc
+vf picode/fiat-lux
+vim fiat-lux.py 
+mc
+~/gitsave "transfer commit, do not use"
+cd picode/fiat-lux
+~/gitsave "transfer commit, do not use"
+sipython3 fiat-lux.py 
+sipython3 "fiat-lux.py -L"
+./fiat-lux.py -L
+vim fiat-lux.py 
+cd
+exit
+tmux attach-session -t mc
+./tmmc 
+deactivate 
+exit
+./fiat-lux 
+./fiat-lux.py 
+which python
+./fiat-lux.py 
+/usr/bin/python3
+export
+deactivate
+virtualenv
+./fiat-lux.py 
+spython3 fiat-lux.py 
+cp fiat-lux.py prompt.py
+vim prompt.py 
+./prompt.py 
+python3 prompt.py 
+git status
+git stash
+sudo apt-get upgrade
+git status
+git pull
+git status
+~/backup-to-lucaDS231 
+sipython3 fiat-lux.py
+exit
+vim fiat-lux.py 
+exit
+sipython3 fiat-lux.py
+exit
+sipython3 fiat-lux.py
+exit
+vim fiat-lux.py 
+exit
+tmux attach-session -t console
+./tmconsole 
+exot
+exit
+rm -r pylon 
+sudo rm -r pylon 
+OA
+vim pressure_sensor.py 
+./FSRread.py
+cd picode/fiat-lux
+ll
+./fiat-lux.py 
+
+python3
+exit
+cd picode/FSRread/
+ll
+./FSRread.py 
+sipython3 FSRread.py 
+exit
+tmux attach-session -t mc
+cd picode/fiat-lux
+virtualenv
+export
+./fiat-lux.py 
+python3 fiat-lux.py 
+sudo python3 fiat-lux.py 
+mc
+sudo python3 fiat-lux.py 
+deactivate 
+sudo python3 fiat-lux.py 
+cd
+sudo apt-get install --reinstall python-rpi.gpio
+mc
+~/tmattach-to mc
+./reboot 
+tmux attach-session -t mc
+exit
+tmux attach-session -t mc
+cd picode/fiat-lux
+mc
+vim fiat-lux.py 
+mc
+vim fiat-lux.py 
+exit
+tmux attach-session -t console
+cd picode/fiat-lux
+sipython3 fiat-lux.py
+~/gitsave "Debugged presure sensor input for dimming one led"
+sipython3 fiat-lux.py
+git status
+exit
+tmux attach-session -t mc
+sudo apt-get install ipdb
+pip
+pip -h
+pip --help
+sudo apt-get install ipython
+sudo apt-get install ipython3
+exit
+tmux attach-session -t console
+sudo apt-get install distribute
+cat deleteme > deleteme.txt
+cat deleteme >> deleteme.txt
+cat deleteme >>> deleteme.txt
+cat deleteme > deleteme.txt
+echo deleteme > deleteme.txt
+cat deleteme.txt 
+ll
+./backup-to-lucaDS231 
+cd picode/fiat-lux
+sudo python -m ipdb fiat-lux.py 
+sudo apt-get py-ipdb
+sudo apt-get install py-ipdb
+sudo apt-get list
+sudo apt-cache searc ipdb
+sudo apt-cache search ipdb
+sudo apt-get install python-ipdb
+exit
+cd picode/fiat-lux
+fiat-lux.py 
+./fiat-lux.py 
+./fiat-lux.py
+sipython3 fiat-lux.py
+sudo apt-get install pip
+pip
+sudo pip help
+distribure
+pip
+pip -h
+man pip
+which pip
+ls /usr/local/bin/pip*
+ll /usr/local/bin/pip*
+man pip
+exit
+ll
+sudo apt-get update
+exit
+tmux attach-session -t console
+exit
+tmux attach-session -t mc
+exit
+tmux attach-session -t console
+cd picode/fiat-lux
+sipython3 fiat-lux.py
+virtualenv
+deactivate 
+mc
+exit
+vim picode/fiat-lux/led_driver/Adafruit_I2C.py
+cd picode/fiat-lux
+cd ..
+cd pwm-driver/
+ll
+./Servo_Example.py 
+sipython3 Servo_Example.py 
+exit
+vim Servo_Example.py 
+sudo python3 setup.py install 
+echo > readme.txt
+echo > r
+echo "d" > r
+ll
+cd ..
+ll
+chown -r pi:pi pilon-smbus_py3-install/
+chown --help
+sudo chown -hR pi:pi pilon-smbus_py3-install/
+ll
+sudo rm .DS_Store 
+ll
+cd pilon-smbus_py3-install/
+ll
+echo > readme.txt
+python3 fiat-lux.py 
+./Servo_Example.py 
+cd ..
+cd pwm-driver/
+python3 Servo_Example.py 
+tmux attach-session -t mc
+./tmmc 
+cd picode/
+ll
+mc
+deactivate 
+cd pwm-driver/
+ll
+sipython3 Servo_Example.py 
+python3 Servo_Example.py 
+exit
+tmux attach-session -t console
+exit
+tmux attach-session -t mc
 exit

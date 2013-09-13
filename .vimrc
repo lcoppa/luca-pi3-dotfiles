@@ -15,16 +15,10 @@ filetype off                   " Disable before plugins: required!
 "call vundle#rc()
 "Bundle 'gmarik/vundle' 
 
-"
-" 2) pathogen plugin manager setup
-"
-execute pathogen#infect()
-call pathogen#incubate()
-call pathogen#helptags()
-
-""""""""""""""""""""""""
+""
 " Plugins for Vundle
-""""""""""""""""""""""""
+""
+
 "
 " github repos
 "
@@ -39,6 +33,16 @@ call pathogen#helptags()
 "
 " non github repos
 "
+
+
+
+
+"
+" 2) pathogen plugin manager setup
+"
+execute pathogen#infect()
+call pathogen#incubate()
+call pathogen#helptags()
 
 """"""""""""""""""""""""
 " plugins configuration
@@ -78,7 +82,7 @@ let g:Powerline_symbols = 'fancy'
 "let g:pymode_doc_key = 'K'
 " Linting; disable if using vim-jedi
 "let g:pymode_lint = 0
-let g:pymode_lint_checker = "pyflakes"
+let g:pymode_lint_checker = "pyflakes,pep8"
 " Do NOT auto check on save, it's too slow on the Pi; use F5 
 let g:pymode_lint_write = 0
 map <F5> :PyLint<CR>
@@ -104,6 +108,12 @@ map <F2> :RopeRename<CR>
 " F2 was the default to opens sidedrawer
 " we use F3
 map <F3> :NERDTreeToggle<CR>
+
+" 
+" Fugitive
+"
+" It's a GIT plugin. I haven't tryed using it yet
+
 
 "
 " TASKLIST setup
@@ -133,9 +143,9 @@ map <F3> :NERDTreeToggle<CR>
 "g:UltiSnipsJumpForwardTrigger          <c-j>
 "g:UltiSnipsJumpBackwardTrigger         <c-k>
 " but we emulate Textmate behaviour
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>" 
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>" 
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 
